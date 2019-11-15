@@ -47,7 +47,7 @@ class Navbar extends Component {
               <FullScreen />
               <Font />
               <Reset />
-              <About />
+              {/* <About /> */}
             </ButtonGroup>
           </div>
         </div>
