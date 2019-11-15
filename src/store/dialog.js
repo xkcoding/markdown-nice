@@ -43,6 +43,8 @@ const store = new Dialog();
 const isVersionDiff = localStorage.getItem(VERSION) !== VERSION_NUM;
 if (isVersionDiff) {
   store.isVersionOpen = true;
+  // 设置，不打开版本弹窗
+  store.isVersionOpen = false;
   localStorage.setItem(VERSION, VERSION_NUM);
 }
 
