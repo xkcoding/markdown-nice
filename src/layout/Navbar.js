@@ -33,7 +33,7 @@ class Navbar extends Component {
               {title}
             </section>
           )}
-          <LogIn />
+          {/* <LogIn /> */}
           <File />
           <Pattern />
           <Function />
@@ -41,7 +41,7 @@ class Navbar extends Component {
           <Theme />
           <CodeTheme />
           <Setting />
-          <Help />
+          {/* <Help /> */}
         </div>
         <div className="nice-right-nav" />
       </div>

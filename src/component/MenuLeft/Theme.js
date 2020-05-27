@@ -116,15 +116,15 @@ class Theme extends React.Component {
           </Menu.Item>
         ))}
         <Menu.Divider />
-        <li className="nice-themeselect-menu-item">
-          <div id="nice-menu-subscribe-more" className="nice-themeselect-theme-item" onClick={this.subscribeMore}>
-            <span>
-              <span className="nice-themeselect-theme-item-flag" />
-              <span className="nice-themeselect-theme-item-name nice-menu-subscribe-more">订阅更多主题</span>
-            </span>
-          </div>
-        </li>
-        <Menu.Divider />
+        {/* <li className="nice-themeselect-menu-item"> */}
+        {/*  <div id="nice-menu-subscribe-more" className="nice-themeselect-theme-item" onClick={this.subscribeMore}> */}
+        {/*    <span> */}
+        {/*      <span className="nice-themeselect-theme-item-flag" /> */}
+        {/*      <span className="nice-themeselect-theme-item-name nice-menu-subscribe-more">订阅更多主题</span> */}
+        {/*    </span> */}
+        {/*  </div> */}
+        {/* </li> */}
+        {/* <Menu.Divider /> */}
 
         <li className="nice-themeselect-menu-item">
           <div id="nice-menu-view-css" className="nice-themeselect-theme-item" onClick={this.toggleStyleEditor}>
