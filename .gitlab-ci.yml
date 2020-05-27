@@ -32,9 +32,6 @@ cache:
   rules:
     - changes:
         - package.json
-    - exists:
-        - package.json
-      when: manual
 
 编译构建:
   stage: 编译构建
