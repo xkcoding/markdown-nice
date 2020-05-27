@@ -17,7 +17,7 @@ services:
         - "traefik.http.routers.__APP_NAME__1.tls=true"
         - "traefik.http.routers.__APP_NAME__1.rule=Host(`__APP_DOMAIN__`)"
         - "traefik.http.services.__APP_NAME__backend.loadbalancer.server.scheme=http"
-        - "traefik.http.services.__APP_NAME__backend.loadbalancer.server.port=80"
+        - "traefik.http.services.__APP_NAME__backend.loadbalancer.server.port=__CONTAINER_PORT__"
 networks:
   traefik:
     external: true
