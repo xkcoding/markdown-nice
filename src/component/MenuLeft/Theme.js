@@ -74,8 +74,6 @@ class Theme extends React.Component {
 
       const remoteThemelist = THEME_LIST_DATA;
 
-      console.log(remoteThemelist);
-
       themeList = [
         {themeId: "normal", name: "默认主题", css: TEMPLATE.normal},
         ...remoteThemelist,
