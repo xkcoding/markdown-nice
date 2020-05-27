@@ -15,6 +15,7 @@ stages:
   - 服务下线
 
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
     - build/
     - node_modules/
