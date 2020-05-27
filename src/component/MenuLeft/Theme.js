@@ -2,7 +2,15 @@ import React from "react";
 import {Menu, Dropdown} from "antd";
 import {observer, inject} from "mobx-react";
 
-import {RIGHT_SYMBOL, TEMPLATE_NUM, MARKDOWN_THEME_ID, THEME_LIST, STYLE, THEME_API, TOKEN} from "../../utils/constant";
+import {
+  RIGHT_SYMBOL,
+  TEMPLATE_NUM,
+  MARKDOWN_THEME_ID,
+  THEME_LIST,
+  STYLE,
+  THEME_DATA,
+  TOKEN,
+} from "../../utils/constant";
 import {replaceStyle, getCookie} from "../../utils/helper";
 import TEMPLATE from "../../template/index";
 import "./Theme.css";
@@ -43,26 +51,28 @@ class Theme extends React.Component {
     try {
       const token = getCookie(TOKEN);
       let response;
-      let remoteThemelist;
-      if (token) {
-        // 如果处于登录状态，则读取订阅的主题
-        response = await axios.get(`https://api.mdnice.com/themes/editor`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        if (!response.data.success) {
-          throw new Error();
-        }
-        remoteThemelist = response.data.data;
-      } else {
-        // 否则取之前的主题
-        response = await axios.get(THEME_API());
-        if (!response.data.success) {
-          throw new Error();
-        }
-        remoteThemelist = response.data.data.themeList;
-      }
+      // let remoteThemelist;
+      // if (token) {
+      //   // 如果处于登录状态，则读取订阅的主题
+      //   response = await axios.get(`https://api.mdnice.com/themes/editor`, {
+      //     headers: {
+      //       Authorization: `Bearer ${token}`,
+      //     },
+      //   });
+      //   if (!response.data.success) {
+      //     throw new Error();
+      //   }
+      //   remoteThemelist = response.data.data;
+      // } else {
+      //   // 否则取之前的主题
+      //   response = await axios.get(THEME_API());
+      //   if (!response.data.success) {
+      //     throw new Error();
+      //   }
+      //   remoteThemelist = response.data.data.themeList;
+      // }
+
+      const remoteThemelist = THEME_DATA.themeList;
 
       themeList = [
         {themeId: "normal", name: "默认主题", css: TEMPLATE.normal},

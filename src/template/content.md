@@ -10,12 +10,12 @@
 
 这段内容展示了在内容里面一些排版格式，比如：
 
-- **加粗** - \`**加粗**\`
-- *倾斜* - \`*倾斜*\`
-- ~~删除线~~ - \`~~删除线~~\`
-- \`Code 标记\` - \`\` \`Code 标记\` \`\`
-- [超级链接](https://xkcoding.com) - \`[超级链接](https://xkcoding.com)\`
-- [username@gmail.com](mailto:username@gmail.com) - \`[username@gmail.com](mailto:username@gmail.com)\`
+- **加粗** - `**加粗**`
+- *倾斜* - `*倾斜*`
+- ~~删除线~~ - `~~删除线~~`
+- `Code 标记` - `` `Code 标记` ``
+- [超级链接](https://xkcoding.com) - `[超级链接](https://xkcoding.com)`
+- [username@gmail.com](mailto:username@gmail.com) - `[username@gmail.com](mailto:username@gmail.com)`
 
 ### 大标题 - Heading 3
 
@@ -31,10 +31,10 @@
 
 ### 图片
 
-\`\`\`
+```
 ![alt 文本](http://image-path.png)
 ![alt 文本](http://image-path.png "图片 Title 值")
-\`\`\`
+```
 
 支持复制粘贴直接上传。
 
@@ -42,31 +42,31 @@
 
 #### 普通
 
-\`\`\`
+```
 *emphasize*    **strong**
 _emphasize_    __strong__
 var a = 1
-\`\`\`
+```
 
 #### 语法高亮支持
 
-如果在 \`\`\` 后面跟随语言名称，可以有语法高亮的效果哦，比如:
+如果在 ``` 后面跟随语言名称，可以有语法高亮的效果哦，比如:
 
 ##### 演示 Go 代码高亮
 
-\`\`\`go
+```go
 package main
 
 import "fmt"
 
 func main() {
-\tfmt.Println("Hello, 世界")
+	fmt.Println("Hello, 世界")
 }
-\`\`\`
+```
 
 ##### 演示 Java 高亮
 
-\`\`\`java
+```java
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -74,9 +74,9 @@ public class HelloWorld {
     }
 
 }
-\`\`\`
+```
 
-> Tip: 语言名称支持下面这些: \`ruby\`, \`python\`, \`js\`, \`html\`, \`erb\`, \`css\`, \`coffee\`, \`bash\`, \`json\`, \`yml\`, \`xml\` ...
+> Tip: 语言名称支持下面这些: `ruby`, `python`, `js`, `html`, `erb`, `css`, `coffee`, `bash`, `json`, `yml`, `xml` ...
 
 ### 有序、无序、任务列表
 
@@ -140,16 +140,15 @@ public class HelloWorld {
 多行公式块：
 
 $$
-\\frac{1}{
-  \\Bigl(\\sqrt{\\phi \\sqrt{5}}-\\phi\\Bigr) e^{
-  \\frac25 \\pi}} = 1+\\frac{e^{-2\\pi}} {1+\\frac{e^{-4\\pi}} {
-    1+\\frac{e^{-6\\pi}}
-    {1+\\frac{e^{-8\\pi}}{1+\\cdots}}
+\frac{1}{
+  \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+  \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+    1+\frac{e^{-6\pi}}
+    {1+\frac{e^{-8\pi}}{1+\cdots}}
   }
 }
 $$
 
 行内公式：
 
-公式 $a^2 + b^2 = \\color{red}c^2$ 是行内。
-`;
+公式 $a^2 + b^2 = \color{red}c^2$ 是行内。
