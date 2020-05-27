@@ -8,7 +8,7 @@ import {
   MARKDOWN_THEME_ID,
   THEME_LIST,
   STYLE,
-  THEME_DATA,
+  THEME_LIST_DATA,
   TOKEN,
 } from "../../utils/constant";
 import {replaceStyle, getCookie} from "../../utils/helper";
@@ -72,7 +72,9 @@ class Theme extends React.Component {
       //   remoteThemelist = response.data.data.themeList;
       // }
 
-      const remoteThemelist = THEME_DATA.themeList;
+      const remoteThemelist = THEME_LIST_DATA;
+
+      console.log(remoteThemelist);
 
       themeList = [
         {themeId: "normal", name: "默认主题", css: TEMPLATE.normal},
