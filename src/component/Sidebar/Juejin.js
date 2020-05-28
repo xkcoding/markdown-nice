@@ -26,11 +26,12 @@ class Juejin extends Component {
     const layout = document.getElementById(LAYOUT_ID); // 保护现场
     const html = layout.innerHTML;
     solveJuejinMath();
-    addJuejinSuffix();
+    // addJuejinSuffix();
     this.html = solveHtml();
     this.html = solveJuejinCode(this.html);
     copySafari(this.html);
-    message.success("已复制且添加 mdnice 排版后缀，感谢宣传，请到稀土掘金粘贴");
+    // message.success("已复制且添加 mdnice 排版后缀，感谢宣传，请到稀土掘金粘贴");
+    message.success("已复制，请到稀土掘金粘贴");
     layout.innerHTML = html; // 恢复现场
   };
 
